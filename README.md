@@ -7,8 +7,10 @@
 
 We introduce MixGS, a novel holistic optimization method for large-scale scene reconstruction.
 
+<img src="./assets/intro_v3.png" style="width:480px;height:auto" />
 
 ## Method
 
+<img src="./assets/pipeline_v3.png" style="width:480px;height:auto" />
 
 
