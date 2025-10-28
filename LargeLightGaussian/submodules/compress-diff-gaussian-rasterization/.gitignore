@@ -1,0 +1,4 @@
+build/
+dist/
+diff_gaussian_rasterization.egg-info
+compress_diff_gaussian_rasterization.egg-info

@@ -1,0 +1,59 @@
+# Model Parameters
+model_params: {
+    model_config: {
+        name: "GaussianModel",
+        kwargs: {}
+    },
+    sh_degree: 3,
+    source_path: "data/urban_scene_3d/sci-art-pixsfm/train",
+    pretrain_path: "data/coarse_gaussians/sciart_point_cloud.ply",
+    model_path: "",
+    images: "images",
+    resolution: 4,
+    white_background: False,
+    data_device: "cuda",
+    eval: True,
+    llffhold: None,
+    hash_args: {
+        canonical_num_levels: 32,
+        canonical_level_dim: 2,
+        canonical_base_resolution: 32,
+        canonical_desired_resolution: 2048,
+        canonical_log2_hashmap_size: 22,
+        bound: -2714.41
+    },
+    network_args: {
+        depth: 1,
+        width: 32,
+    }
+}
+
+# Pipeline Parameters
+pipeline_params: {
+    convert_SHs_python:  False,
+    compute_cov3D_python:  False,
+    debug:  False,
+    scale_min: 0.002,
+}
+
+
+optim_params: {
+    iterations: 300_000,
+    joint_start_iter: 50_000,
+    position_lr_init: 0.000064,
+    position_lr_final: 0.00000064,
+    position_lr_delay_mult: 0.01,
+    position_lr_max_steps: 300_000,
+    decoder_lr_max_steps: 300_000,
+    feature_lr: 0.0025,
+    opacity_lr: 0.05,
+    scaling_lr: 0.005,
+    rotation_lr: 0.001,
+    percent_dense: 0.01,
+    lambda_dssim: 0.2,
+    opacity_thr: 0.5,
+    encoder_lr_scale: 300.0,
+    decoder_lr_scale: 40.0,
+}
+
+
